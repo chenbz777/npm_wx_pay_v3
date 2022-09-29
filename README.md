@@ -204,7 +204,7 @@ JsSDk支付
 
 ```js
 const outTradeNo = pay.createOrderNo();
-const payerOpenId = 'openid';
+const payerOpenId = '';
 const amountTotal = 1;
 const description = '测试商品';
 
@@ -239,7 +239,7 @@ pay.jsApiPay(outTradeNo, payerOpenId, amountTotal, description)
 
 ```js
 const outTradeNo = pay.createOrderNo();
-const payerOpenId = 'openid';
+const payerOpenId = '';
 const amountTotal = 1;
 const description = '测试商品';
 
@@ -398,9 +398,9 @@ pay.getOrderByTransactionId(transactionId)
 ##### 使用示例
 
 ```js
-const transactionId = '';
+const outTradeNo = '';
 
-pay.getOrderByTransactionId(transactionId)
+pay.getOrderByOutTradeNo(outTradeNo)
   .then((res) => {
     console.log(res);
   })
@@ -426,9 +426,9 @@ pay.getOrderByTransactionId(transactionId)
 ##### 使用示例
 
 ```js
-const transactionId = '';
+const outTradeNo = '';
 
-pay.getOrderByTransactionId(transactionId)
+pay.closeOrderByOutTradeNo(outTradeNo)
   .then((res) => {
     console.log(res);
   })
@@ -498,7 +498,7 @@ const outRefundNo = pay.createOrderNo();
 const amountTotal = 1;
 const amountRefund = 1;
 
-pay.refundDomesticByOutTradeNo(transactionId, outRefundNo, amountTotal, amountRefund)
+pay.refundDomesticByOutTradeNo(outTradeNo, outRefundNo, amountTotal, amountRefund)
   .then((res) => {
     console.log(res);
   })

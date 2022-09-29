@@ -698,6 +698,9 @@ pay.downloadFundFlowBill(billDate, accountType, tarType)
 ##### 使用示例
 
 ```js
+const outBatchNo = pay.createOrderNo();
+const batchName = '活动1';
+const batchRemark = '测试活动1转账';
 const transferDetailList = [
   {
     out_detail_no: pay.createOrderNo(),
@@ -707,7 +710,7 @@ const transferDetailList = [
   }
 ]
 
-pay.transferBatches(pay.createOrderNo(), '活动1', '测试活动1转账', transferDetailList)
+pay.transferBatches(outBatchNo, batchName, batchRemark, transferDetailList)
   .then((res) => {
     console.log(res);
   })

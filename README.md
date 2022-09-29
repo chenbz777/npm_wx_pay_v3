@@ -17,7 +17,7 @@ npm install @chenbz/wx_pay_v3
 ## 实例化
 
 ```js
-const wxPayV3 = require('@chenbz/wx_pay_v3');
+const { WxPayV3 } = require('@chenbz/wx_pay_v3');
 
 const payConfig = {
     appId: '', // 应用ID
@@ -30,7 +30,7 @@ const payConfig = {
     refundNotifyUrl: '', // 退款回调地址
   };
 
-const pay = new wxPayV3(payConfig);
+const pay = new WxPayV3(payConfig);
 ```
 
 <br />

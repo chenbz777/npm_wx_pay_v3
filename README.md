@@ -20,7 +20,7 @@ npm install @chenbz/wx_pay_v3
 const wxPayV3 = require('@chenbz/wx_pay_v3');
 
 const payConfig = {
-    appId: '',  // 应用ID
+    appId: '', // 应用ID
     mchId: '', // 商户ID
     apiKeyV3: '', // API_v3密钥
     serialNo: '', // API证书序列号
@@ -30,7 +30,7 @@ const payConfig = {
     refundNotifyUrl: '', // 退款回调地址
   };
 
-const pay = new wxPayV3();
+const pay = new wxPayV3(payConfig);
 ```
 
 <br />

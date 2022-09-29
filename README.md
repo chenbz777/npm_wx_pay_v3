@@ -27,7 +27,7 @@ const payConfig = {
     privateKey: '', // API证书私钥
     publicKey: '', // API证书公钥
     payNotifyUrl: '', // 支付回调地址
-    refundNotifyUrl: '', // 退款对调地址
+    refundNotifyUrl: '', // 退款回调地址
   };
 
 const pay = new wxPayV3();

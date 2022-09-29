@@ -1,6 +1,6 @@
 {
   "name": "@chenbz/wx_pay_v3",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "微信支付v3",
   "main": "./dist/index.ts",
   "types": "./dist/index.d.ts",

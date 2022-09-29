@@ -11,7 +11,7 @@ import { IConfig, IKey, IRefundWay, ITransferDetailItem, } from './interfaceData
 /**
  * [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/index.shtml)
  */
-export default class WxPayV3 {
+export class WxPayV3 {
 
   constructor(config: IConfig) {
 

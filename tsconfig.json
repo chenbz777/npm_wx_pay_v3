@@ -3,7 +3,7 @@
     "target": "es2016",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./dist",
     "strict": true
   },
   "include": [
@@ -11,5 +11,6 @@
   ],
   "exclude": [
     "node_modules",
+    "./dist"
   ]
 }

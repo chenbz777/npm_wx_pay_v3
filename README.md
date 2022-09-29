@@ -17,7 +17,7 @@ npm install @chenbz/wx_pay_v3
 ## 实例化
 
 ```js
-const { WxPayV3 } = require('@chenbz/wx_pay_v3/dist');
+const { WxPayV3 } = require('@chenbz/wx_pay_v3');
 
 const payConfig = {
     appId: '', // 应用ID

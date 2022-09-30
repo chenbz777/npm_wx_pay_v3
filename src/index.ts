@@ -640,7 +640,6 @@ export class WxPayV3 {
    * @date 2022-09-30
    */
   getCertificates(): Promise<any> {
-
     const url = '/v3/certificates';
 
     const headers = {

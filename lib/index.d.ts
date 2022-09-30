@@ -62,9 +62,7 @@ export declare class WxPayV3 {
      * @author chenbz
      * @date 2022-09-28
      */
-    jsApi(outTradeNo: string, payerOpenId: string, amountTotal: number, description: string, options?: any): Promise<{
-        prepay_id: string;
-    }>;
+    jsApi(outTradeNo: string, payerOpenId: string, amountTotal: number, description: string, options?: any): Promise<any>;
     /**
      * @desc jsApi支付
      * @param outTradeNo {string} 商户订单号 => 可调用"createOrderNo()"方法生成

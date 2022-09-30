@@ -158,7 +158,7 @@ export class WxPayV3 {
    * @author chenbz
    * @date 2022-09-28
    */
-  jsApi(outTradeNo: string, payerOpenId: string, amountTotal: number, description: string, options?: any): Promise<{ prepay_id: string }> {
+  jsApi(outTradeNo: string, payerOpenId: string, amountTotal: number, description: string, options?: any): Promise<any> {
 
     const { appId, mchId, payNotifyUrl } = this.config;
 
@@ -205,7 +205,7 @@ export class WxPayV3 {
     const timeStamp = date.getTimestamp10();
     const nonceStr = random.str(32);
 
-    const { prepay_id: prepayId } = await this.jsApi(outTradeNo, payerOpenId, amountTotal, description, options);
+    const { data: { prepay_id: prepayId } } = await this.jsApi(outTradeNo, payerOpenId, amountTotal, description, options);
 
     const signatureData = {
       appId,
@@ -558,7 +558,7 @@ export class WxPayV3 {
   async downloadTradeBill(billDate: string, billType: string = 'ALL', tarType: string = 'GZIP'): Promise<any> {
     const tradeBill = await this.getTradeBill(billDate, billType, tarType);
 
-    const { download_url: downloadUrl } = tradeBill;
+    const { data: { download_url: downloadUrl } } = tradeBill;
 
     const url = downloadUrl.replace('https://api.mch.weixin.qq.com', '');
 
@@ -581,7 +581,7 @@ export class WxPayV3 {
   async downloadFundFlowBill(billDate: string, accountType: string = 'BASIC', tarType: string = 'GZIP'): Promise<any> {
     const fundFlowBill = await this.getFundFlowBill(billDate, accountType, tarType);
 
-    const { download_url: downloadUrl } = fundFlowBill;
+    const { data: { download_url: downloadUrl } } = fundFlowBill;
 
     const url = downloadUrl.replace('https://api.mch.weixin.qq.com', '');
 

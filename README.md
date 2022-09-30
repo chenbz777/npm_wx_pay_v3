@@ -76,6 +76,7 @@ const pay = new WxPayV3(payConfig);
 | downloadTradeBill              | 下载申请交易账单                 |
 | downloadFundFlowBill           | 下载申请资金账单                 |
 | transferBatches                | 发起商户转账                     |
+| getCertificates                | 获取平台证书列表                 |
 
 <br />
 
@@ -711,6 +712,30 @@ const transferDetailList = [
 ]
 
 pay.transferBatches(outBatchNo, batchName, batchRemark, transferDetailList)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+<br />
+
+### getCertificates(获取平台证书列表)
+
+##### 使用场景
+
+定期检查证书 => 提前更换证书
+
+##### 参数
+
+null
+
+##### 使用示例
+
+```js
+pay.getCertificates()
   .then((res) => {
     console.log(res);
   })

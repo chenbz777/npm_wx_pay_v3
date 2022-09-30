@@ -126,7 +126,11 @@ export class WxPayV3 {
     let decryptedText: any = decipher.update(data, undefined, 'utf-8');
     decryptedText += decipher.final();
 
-    return JSON.parse(decryptedText);
+    try {
+      return JSON.parse(decryptedText);
+    } catch (e) {
+      return decryptedText;
+    }
   }
 
   /**

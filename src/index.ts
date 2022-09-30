@@ -633,4 +633,21 @@ export class WxPayV3 {
     return request.post(url, data, headers);
   }
 
+  /**
+   * @desc 获取平台证书列表
+   * @return object
+   * @author chenbz
+   * @date 2022-09-30
+   */
+  getCertificates(): Promise<any> {
+
+    const url = '/v3/certificates';
+
+    const headers = {
+      Authorization: this.getAuthorization('GET', url),
+    }
+
+    return request.get(url, {}, headers);
+  }
+
 }

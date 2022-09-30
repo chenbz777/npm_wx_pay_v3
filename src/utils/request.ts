@@ -66,12 +66,14 @@ const baseRequest = ({ url, method, data, headers }: IBaseRequest): Promise<any>
       params,
     })
       .then(response => {
+        const { status, headers, data } = response;
 
-        resolve(response.data);
+        resolve({ status, headers, data });
       })
       .catch((error) => {
+        const { status, headers, data } = error.response;
 
-        reject(error.response?.data);
+        reject({ status, headers, data });
       });
   });
 };

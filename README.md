@@ -84,7 +84,7 @@ const pay = new WxPayV3(payConfig);
 
 如果可以，来瓶快乐水
 
-<img src="https://s1.ax1x.com/2022/09/29/xndVoj.jpg" alt="https://s1.ax1x.com/2022/09/29/xndVoj.jpg" style="width: 300px;" />
+<img src="http://img.chenbz.com/wxCode.jpeg" alt="http://img.chenbz.com/wxCode.jpeg" style="width: 300px;" />
 
 <br />
 
